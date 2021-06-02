@@ -22,3 +22,15 @@ route add default gw 192.168.1.1 # your network gateway
 net &
 ```
 Now insert the sd card to the camera boot it up, first time it just copies file, after second boot it will execute it. Now you can connect via telnet to port 24 to it, there will be no user/pass prompt.
+
+# Secret API
+```
+curl "http://camera_ip:8001/playaudio?file=/tmp/VOICE/alarm.wav" # play sound
+curl "http://camera_ip:8001/ircut?mode=night" # ir mode night
+curl "http://camera_ip:8001/ircut?mode=day" # ir mode day
+curl "http://camera_ip:8001/whitelight?mode=on" # turn on lights
+curl "http://camera_ip:8001/whitelight?mode=off" # turn off lights
+curl "http://camera_ip:8001/reloadcfg" # reload config
+curl "http://camera_ip:8001/rstsys"  # reboot
+curl "http://camera_ip:8001/wexit" # exit p2pcam daemon
+```
