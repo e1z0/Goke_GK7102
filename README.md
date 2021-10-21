@@ -23,6 +23,12 @@ net &
 ```
 Now insert the sd card to the camera boot it up, first time it just copies file, after second boot it will execute it. Now you can connect via telnet to port 24 to it, there will be no user/pass prompt.
 
+# mount nfs
+
+```
+mount -t nfs4 10.10.0.10:/backups /var/backups
+```
+
 # Secret API
 ```
 curl "http://camera_ip:8001/playaudio?file=/tmp/VOICE/alarm.wav" # play sound
