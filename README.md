@@ -40,3 +40,7 @@ curl "http://camera_ip:8001/reloadcfg" # reload config
 curl "http://camera_ip:8001/rstsys"  # reboot
 curl "http://camera_ip:8001/wexit" # exit p2pcam daemon
 ```
+
+# Other sources
+
+* https://github.com/bolshevik/goke-GK7102-customizer
